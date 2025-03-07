@@ -6,7 +6,8 @@
     class Cliente extends Pessoa{
         protected float $precoTotal;
 
-        public function __construct(string $cpf, string $nome, string $telefone, string $endereco, float $precoTotal){
+        public function __construct(string $cpf, string $nome, string $telefone, 
+        Endereco $endereco, float $precoTotal){
             parent::__construct( $cpf, $nome, $telefone, $endereco);
             $this->precoTotal = $precoTotal;
         }
