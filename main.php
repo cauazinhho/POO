@@ -7,7 +7,10 @@
     require_once('Veiculo.php');
     require_once('Compra.php');
     require_once('Produto.php');
+    require_once('DAO/Conexao.php');
 
+
+    use PHP\Modelo\DAO\Conexao;
     use PHP\Modelo\Pessoa;//Defina qual a classe
     use PHP\Modelo\Cliente;
     use PHP\Modelo\Funcionario;
@@ -16,6 +19,11 @@
     use PHP\Modelo\Compra;
     use PHP\Modelo\Produto;
 
+    $conexao = new Conexao();
+    $conexao->conectar();
+
+
+    /*
     $produto1 = new Produto(1, 'Produto Bom', 'Grande', '15kg');
 
     $veiculo1 = new Veiculo(1, 'EFF1525', 'Kleber', 'Preto', 'Golf', 2010, 'Volks'); 
@@ -37,5 +45,5 @@
     echo "<br><br>" . $cliente2->imprimir();
     echo "<br><br>" . $funcionario1->imprimir();
     echo "<br><br>" . $funcionario2->imprimir();
-   
+   */
 ?>
