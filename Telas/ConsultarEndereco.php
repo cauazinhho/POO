@@ -32,9 +32,7 @@
 
             <button type="submit" class="btn btn-primary">Consultar
                 <?php
-              
                 $consultar->consultarEndereco($conexao, $_POST['codigo']);
-                
                 ?>
             </button>
         </form>

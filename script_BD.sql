@@ -1,6 +1,7 @@
 create database ti21;
+
 use ti21;
- 
+
 create table endereco(
 	codigo int not null auto_increment primary key,
     logradouro varchar(150)not null,
@@ -11,7 +12,7 @@ create table endereco(
     cep varchar(10)not null,
     pais varchar(25)not null
 )engine = innoDB;
- 
+
 create table cliente(
 	cpf bigInt not null primary key,
     nome varchar(150)not null,
@@ -19,8 +20,9 @@ create table cliente(
     codigoEndereco int not null,
     precoTotal decimal(10,2)not null
 )engine = innoDB;
- 
+
 alter table cliente add constraint clienteEndereco
 foreign key (codigoEndereco) references endereco(codigo);
 
- 
+select * from cliente;
+select * from endereco;

@@ -4,13 +4,13 @@
     use PHP\Modelo\Pessoa;
 
     class Cliente extends Pessoa{
-        protected float $precoTotal;
+        protected float $precoTotal ;
 
-        public function __construct(string $cpf, string $nome, string $telefone, 
-        Endereco $endereco, float $precoTotal){
-            parent::__construct( $cpf, $nome, $telefone, $endereco);
+        public function __construct(string $cpf, string $nome, string $telefone, Endereco $endereco, float $precoTotal)
+        {
+            parent::__construct($cpf,$nome,$telefone,$endereco);
             $this->precoTotal = $precoTotal;
-        }
+        }//Fim do constructor
 
         public function __get(string $dado):mixed
         {
@@ -25,7 +25,7 @@
         public function imprimir():string
         {
             return parent::imprimir().
-            "<br>Preço Total: R$ ".$this->precoTotal;
-        }//fim do método
-  }//fim da classe
+                   "<br>Preço Total: R$ ".$this->precoTotal;
+        }//Fim do método
+    }//fim da classe
 ?>
